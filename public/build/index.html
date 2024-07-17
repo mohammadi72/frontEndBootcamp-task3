@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"
+    ></script>
+    <title>task-3</title>
+    <link rel="stylesheet" href="../build/tailwind.css" />
+  </head>
+  <body class="bg-gray-200">
+    <div
+      class="grid grid-cols-8 grid-rows-[100px-minmax(500px,_1fr)] p-5 container 2xl:max-w-screen-2xl mx-auto gap-y-4 lg:gap-x-8"
+    >
+      <h1
+        class="col-start-3 col-end-6  lg:col-start-1 lg:col-end-3 text-center  py-14 font-bold text-nowrap text-lg text-slate-800 "
+      >
+        سبد دوره های شما
+      </h1>
+      <!-- courses -->
+
+      <div
+        class="col-span-8 w-full mb-8 lg:col-span-5 lg:row-start-2 xl:col-span-6"
+      >
+        <div
+          class="flex flex-col gap-y-4 px-2 xl:grid-cols-2 xl:grid xl:gap-x-3"
+          x-data="{
+          courses:[
+        {id:1,title:'دوره حرفه ای متخصص ری اکت',price:'۶،۲۹۸،۰۰۰'},
+        {id:2,title:'دوره حرفه ای متخصص ری اکت',price:'۶،۲۹۸،۰۰۰'},
+        {id:3,title:'دوره حرفه ای متخصص ری اکت',price:'۶،۲۹۸،۰۰۰'},
+        {id:4,title:'دوره حرفه ای متخصص ری اکت',price:'۶،۲۹۸،۰۰۰'},
+        {id:5,title:'دوره حرفه ای متخصص ری اکت',price:'۶،۲۹۸،۰۰۰'},
+        {id:6,title:'دوره حرفه ای متخصص ری اکت',price:'۶،۲۹۸،۰۰۰'},
+        ]}"
+        >
+          <template x-for="course in courses" :key="course.id">
+            <!-- course -->
+            <div
+              class="bg-white flex items-center justify-between p-3 md:p-6 lg:p-3 rounded-lg shadow-lg"
+            >
+              <!-- image of course -->
+              <div
+                class="w-24 sm:w-32 ml-2 rounded-xl outline-none overflow-hidden h-full"
+              >
+                <img
+                  class="w-full h-auto"
+                  src="/assets/images/reactlogo.png"
+                  alt=""
+                />
+              </div>
+              <!-- content course -->
+              <div class="flex-1 md:flex md:items-end md:justify-between">
+                <div class="">
+                  <span
+                    class="text-nowrap text-sm font-bold sm:text-lg lg:text-sm text-slate-800"
+                    x-text="course.title"
+                  >
+                  </span>
+                  <div class="md:grid md:grid-cols-2 md:max-w-60 mt-2   hidden">
+                    <div class="flex items-center justify-start gap-x-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4 stroke-gray-500"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                      <span class="text-gray-500 text-sm lg:text-xs">۴۵ ساعت</span>
+                    </div>
+                    <div class="flex items-center justify-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4 stroke-gray-500"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                      <span class="text-gray-500 text-sm text-nowrap lg:text-xs"
+                        >+۱۳۰۰ دانشجو</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-start gap-x-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4 stroke-gray-500"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                        />
+                      </svg>
+                      <span class="text-gray-500 text-sm lg:text-xs">۲۷۰ جلسه</span>
+                    </div>
+                    <div class="flex items-center justify-start gap-x-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4 stroke-yellow-400"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                        />
+                      </svg>
+                      <span class="text-yellow-400 text-nowrap text-sm lg:text-xs"
+                        >چالش های هفتگی</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-between relative gap-x-3">
+                  <div
+                    class="md:flex gap-x-1 absolute -top-16 lg:-top-10 lg:left-1  hidden"
+                  >
+                    <div class="rounded-2xl overflow-hidden w-10 bg-red-100">
+                      <img
+                        class="w-full h-auto"
+                        src="/assets/images/s-mohammadi.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex flex-col justify-end">
+                      <span class="text-gray-300 text-[8px]">مدرس دوره</span>
+                      <span class="font-bold text-xs text-nowrap"
+                        >صاحب محمدی</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex gap-x-1">
+                    <div class="flex items-center gap-x-2 lg:gap-x-1">
+                      <span
+                        class="font-bold text-blue-600"
+                        x-text="course.price"
+                      ></span>
+                      <span class="text-xs text-gray-400">تومان</span>
+                    </div>
+                    <div class="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-9 cursor-pointer stroke-red-500 border border-solid border-gray-200 rounded-full p-2 hover:stroke-red-600 lg:size-8"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+      <!--bill carts -->
+      <div class="col-span-8 lg:col-span-3 lg:row-start-2 xl:col-span-2">
+        <div
+          class="bg-white flex-col mb-10 justify-center py-7 px-5 rounded-lg shadow-lg w-full"
+        >
+          <div class="flex items-cenete justify-start gap-x-2 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 stroke-gray-500"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z"
+              />
+            </svg>
+            <span class="text-slate-800 font-extrabold">پرداخت</span>
+          </div>
+          <hr class="mb-4" />
+
+          <div class="divide-y divide-dashed">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-bold text-slate-700">جمع دوره ها</span>
+                <span class="text-blue-600 font-bold">۴،۲۵۰،۰۰۰ +</span>
+              </div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-bold text-slate-700">تخفیف ها</span>
+                <span class="text-red-500 font-bold">۷۵۰،۰۰۰ -</span>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-center py-5 text-slate-700 text-sm cursor-pointer"
+            >
+              کد تخفیف دارم!
+            </div>
+          </div>
+          <div class="flex justify-center items-center">
+            <button class="bg-blue-600 py-4 px-6 rounded-xl">
+              <span class="text-white ml-1 font-bold">پرداخت </span
+              ><span class="text-white font-bold">۳،۵۰۰،۰۰۰ </span
+              ><span class="text-xs text-white">تومان</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
